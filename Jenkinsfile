@@ -41,7 +41,7 @@ pipeline {
         stage('Wait before Destroy') {
             steps {
                 echo 'Waiting 30 minutes before destroying resources...'
-                sleep(time: 30, unit: 'MINUTES')  
+                sleep(time: 10, unit: 'MINUTES')  
             }
         }
 
