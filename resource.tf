@@ -49,6 +49,7 @@ resource "azurerm_lb_backend_address_pool" "vmss_bap" {
 
 resource "azurerm_windows_virtual_machine_scale_set" "vmss" {
   name                = "my-win-vmss"
+  computer_name_prefix = "winvmss" 
   resource_group_name = data.azurerm_resource_group.vmss_rg.name
   location            = data.azurerm_resource_group.vmss_rg.location
   sku                 = "Standard_B2s"
