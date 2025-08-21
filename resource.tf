@@ -87,7 +87,7 @@ resource "azurerm_windows_virtual_machine_scale_set" "vmss" {
 resource "azurerm_consumption_budget_resource_group" "vmss_budget" {
   name              = "vmss-budget-alert"
   resource_group_id = data.azurerm_resource_group.vmss_rg.id
-  amount            = 50
+  amount            = 1 
   time_grain        = "Monthly"
 
   time_period {
